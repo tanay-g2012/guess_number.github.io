@@ -1,8 +1,8 @@
-let randomNumber = Math.floor (Math.Random ()*100)+1;
+let randomNumber = Math.floor (Math.random ()*100)+1;
 
 const guesses = document.querySelector(".guesses");
 const lastResult = document.querySelector (".lastResult");
-const lowOrHi = document.querySelector ("lowOrHi");
+const lowOrHi = document.querySelector (".lowOrHi");
 
 const guessSubmit = document.querySelector(".guessSubmit");
 const guessField = document.querySelector(".guessField");
@@ -23,7 +23,7 @@ function checkGuess () {
 
     if (userGuess === randomNumber){
         lastResult.textContent = "Congratulations! You got it right!";
-        lastResult.style.backgrountColor = "green"
+        lastResult.style.backgroundColor = "green"
         lowOrHi.textContent = ""
         setGameOver();
         
@@ -45,7 +45,7 @@ function checkGuess () {
             guessField.value = "";
             guessField.focus();
 }
-guessSubmit.addEventListener("click", checkGuess);4
+guessSubmit.addEventListener("click", checkGuess);
 function setGameOver (){
     guessField.disabled=true;
     guessSubmit.disabled=true;
@@ -62,7 +62,7 @@ function resetame(){
         resetPara.textContent="";
     }
 
-    resetButton.parentNode..removeChild(resetButton);
+    resetButton.parentNode.removeChild(resetButton);
 
     guessField.disabled = false;
     guessSubmit.disabled = false;
