@@ -54,7 +54,7 @@ function setGameOver (){
     document.body.append(resetButton)
     resetButton.addEventListener("click", resetGame);
 }
-function resetame(){
+function resetGame(){
     guessCount = 1;
 
     const resetParas=document.querySelectorAll (".resultParas p");
